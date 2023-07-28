@@ -10,9 +10,7 @@ const Map = ({ center, zoom, address }) => {
 
   useEffect(() => {
     const fetchGeoCode = async () => {
-      // If address is provided, use it to fetch coordinates
       if (address) {
-        // Replace spaces with '+' for URL
         const formattedAddress = address.replace(/ /g, "+");
 
         const response = await fetch(

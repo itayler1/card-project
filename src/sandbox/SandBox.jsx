@@ -5,9 +5,7 @@ import NavItem from "../routes/components/NavItem";
 import ROUTES from "../routes/routesModel";
 
 export default function SandBox() {
-  //   const user = {};
-  //   user.isAdmin = true;
-  //   if (!user || !user.isAdmin) return <Navigate replace to={ROUTES.CARDS} />;
+
   return (
     <div>
       <AppBar position="sticky" color="transparent">

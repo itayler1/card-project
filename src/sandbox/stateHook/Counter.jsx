@@ -2,12 +2,7 @@ import { Button } from "@mui/material";
 import React, { useState } from "react";
 
 export default function Counter() {
-  ////destructuring reminder
-  // let arr = [1, 2, 3, 4];
-  // let obj = { firstName: "Tzach", lastName: "Dabush" };
-  // let [first, second, third, forth] = arr;
-  // let { firstName, lastName } = obj;
-  // console.log(firstName);
+
 
   const [counter, setCounter] = useState(0);
 

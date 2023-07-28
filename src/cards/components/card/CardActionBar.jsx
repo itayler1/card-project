@@ -12,10 +12,12 @@ import ROUTES from "../../../routes/routesModel";
 
 export default function CardActionBar({
   handleDelete,
-  handleEdit,
   handleLike,
   id,
   user_id,
+  isLiked,
+  setLiked,
+  updateLike = ()=>{return null}
 }) {
   const { user } = useUser();
   const [isDialogOpen, setDialog] = useState(false);
@@ -25,11 +27,17 @@ export default function CardActionBar({
     setDialog(false);
   };
 
+  const handleLikeCard = (id) =>{
+    handleLike(id);
+    setLiked(prev => !prev);
+    updateLike(prev => !prev);
+  };
+
   return (
     <>
       <CardActions sx={{ paddingTop: 0, justifyContent: "space-between" }}>
         <Box>
-          {user?.isAdmin || user?.id == user_id ? (
+          {user?.isAdmin || user?.id === user_id ? (
             <>
               <IconButton
                 aria-label="Delete Card"
@@ -54,7 +62,8 @@ export default function CardActionBar({
           {user && (
             <IconButton
               aria-label="Add to favorite"
-              onClick={() => handleLike(id)}
+              onClick={()=>handleLikeCard(id)}
+              style={isLiked ? { color: 'red' } : {}}
             >
               <FavoriteIcon />
             </IconButton>
@@ -72,7 +81,6 @@ export default function CardActionBar({
 
 CardActionBar.propTypes = {
   handleDelete: func.isRequired,
-  handleEdit: func.isRequired,
   handleLike: func.isRequired,
   id: string.isRequired,
 };

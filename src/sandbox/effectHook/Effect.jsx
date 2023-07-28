@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import Country from "./Country";
 
 export default function Effect() {
-  //הצג את הפרטים של כל המדינות
-  //שם המדינה..
+
   const [countries, setCountries] = useState();
   const [refresh, setRefresh] = useState(false);
 

@@ -32,7 +32,7 @@ export default function MyCards() {
       <Container sx={{ mt: 2 }}>
         <PageHeader
           title="Cards"
-          subtitle="On this page you can find all bussines cards from all categories"
+          subtitle="On this page you can find all the bussines cards you've created"
         />
         <CardsFeedback
           isLoading={isLoading}

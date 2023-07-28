@@ -68,3 +68,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### פירוט פרוייקט בעברית
+
+BCards
+תיאור הפרויקט
+BCards הוא אפליקציית React שמתמקדת בתקשורת מהקצה הקדמי אל הקצה האחורי. החזית מתמקדת ביצירה וניהול של רכיבי כרטיסי עסק וניהולם בשילוב עם מערכת משתמשים.
+
+תכונות
+יצירת כרטיס עסק
+ניהול כרטיסי עסק
+כרטיסים מועדפים
+דף פרטי כרטיס
+תיבת חול של מנהל
+דרישות מוקדמות
+כדי להשתמש ב-BCards, אתה צריך להתקין Node.js ו- npm. פרויקט זה משתמש גם בספריות כמו MUI שיתקנו באופן אוטומטי כאשר אתה מתקין התלמידים דרך npm.
+
+התקנה
+שכפל את מאגר ה-GitHub אל המכונה המקומית שלך.
+נווט אל ספריית הפרויקט והרץ npm install כדי להתקין את כל התלמידים.
+כדי להפעיל את השרת האחורי, הרץ node server.js (או שם הקובץ של שרת האחורי).
+לאחר שכל התלמידים מותקנים, אתה יכול להפעיל את האפליקציה על ידי הפעלת npm start.
+התחלת השימוש
+לאחר ההתקנה, אתה יכול להירשם וליצור משתמש, ולהתחיל ליצור את כרטיסי העסק שלך.
+
+בעיות ידועות
+לא ידועות בעיות או באגים בפרויקט זה.
+
+קרדיט
+פרויקט זה נוצר על ידי איתי לרנר. ניתן ליצור קשר עם איתי באמצעות דוא"ל itayy1601@gmail.com.

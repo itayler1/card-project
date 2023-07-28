@@ -1,16 +1,11 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { arrayOf } from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import cardType from "../models/types/cardType";
 import CardBussinesComponent from "./card/CardBussinesComponent";
 
-export default function Cards({ cards, handleDelete }) {
-  const handleEdit = (id) => {
-    console.log(`Card ${id} is Edited`);
-  };
-  const handleLike = (id) => {
-    console.log(`Card ${id} is Liked`);
-  };
+export default function Cards({ cards, handleDelete,updateLike}) {
+
   return (
     <>
       <Grid container spacing={2}>
@@ -20,8 +15,7 @@ export default function Cards({ cards, handleDelete }) {
               card={card}
               key={card._id}
               handleDelete={handleDelete}
-              handleEdit={handleEdit}
-              handleLike={handleLike}
+              updateLike={updateLike}
             />
           </Grid>
         ))}

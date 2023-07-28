@@ -12,12 +12,10 @@ export default function Get2Countries() {
 
   const updateCountry1 = () => {
     setCountry1Details(country1);
-    // setCountry1Details(countryName1.current.value);
   };
 
   const updateCountry2 = () => {
     setCountry2Details(country2);
-    // setCountry2Details(countryName2.current.value);
   };
 
   return (

@@ -19,7 +19,7 @@ export default function SnackbarProvider({ children }) {
   return (
     <>
       <Snackbar
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         open={isSnackOpen}
         onClose={() => setOpenSnack((prev) => !prev)}
         autoHideDuration={5000}

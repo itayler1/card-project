@@ -12,6 +12,7 @@ import Todo from "./sandbox/stateHook/Todo";
 import ThemeProvider from "./providers/ThemeProvider";
 import SnackbarProvider from "./providers/SnackbarProvider";
 import UserProvider from "./users/providers/UserProvider";
+import SearchBarProvider from "./providers/SearchBarProvider";
 
 function App() {
   return (
@@ -20,9 +21,11 @@ function App() {
         <SnackbarProvider>
           <ThemeProvider>
             <UserProvider>
-              <Layout>
-                <Router />
-              </Layout>
+              <SearchBarProvider>
+                <Layout>
+                  <Router />
+                </Layout>
+              </SearchBarProvider>
             </UserProvider>
           </ThemeProvider>
         </SnackbarProvider>

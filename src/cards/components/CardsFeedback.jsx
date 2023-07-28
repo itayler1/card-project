@@ -9,7 +9,8 @@ export default memo(function CardsFeedback({
   cards,
   error,
   handleDelete,
-}) {
+  updateLike
+}){
   if (isLoading) return <Spinner />;
   if (error) return <Error errorMessage={error} />;
   if (cards && cards.length === 0) {
@@ -19,6 +20,7 @@ export default memo(function CardsFeedback({
       </Typography>
     );
   }
-  if (cards) return <Cards cards={cards} handleDelete={handleDelete} />;
+  if (cards) return <Cards cards={cards} handleDelete={handleDelete}
+  updateLike={updateLike}/>;
   return null;
 });

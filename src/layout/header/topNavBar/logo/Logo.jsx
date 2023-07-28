@@ -7,7 +7,7 @@ import ROUTES from "../../../../routes/routesModel";
 export default function Logo() {
   return (
     <>
-      <NavBarLink to={ROUTES.ROOT} sx={{ color: "#000" }}>
+      <NavBarLink to={ROUTES.ROOT} sx={{ color: "#FFFFFF" }}>
         <Typography
           variant="h4"
           sx={{

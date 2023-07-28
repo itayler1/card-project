@@ -17,11 +17,6 @@ export default function FirstEffect() {
     console.log("first effect runing");
   }, [first]);
 
-  //יש לייבא את המידע על כל המדינות
-  //מה API
-  //שעבדנו איתו בעבר ולהציג בלוג.
-
-  //הוסף כפתור שבלחיצה עליו כל המידע ייובא שוב
 
   return (
     <>

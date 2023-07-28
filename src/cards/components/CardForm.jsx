@@ -2,6 +2,8 @@ import React from "react";
 import { func, object, string } from "prop-types";
 import Form from "../../forms/components/Form";
 import Input from "../../forms/components/Input";
+import normalizeCard from "../helpers/normalization/normalizeCard";
+import { createCard } from "../services/cardApiService";
 
 const CardForm = ({
   onSubmit,
@@ -14,7 +16,7 @@ const CardForm = ({
 }) => {
   return (
     <Form
-      onSubmit={onSubmit}
+      onSubmit={()=>onSubmit(normalizeCard(data))}
       onReset={onReset}
       errors={errors}
       onChange={onFormChange}

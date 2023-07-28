@@ -13,7 +13,7 @@ const MapPage = () => {
 
   const mapSectionStyle = {
     width: "40%",
-    height: "400px", // Adjust as needed
+    height: "400px", 
     margin: "20px",
   };
 

@@ -1,20 +1,8 @@
 import {
-  Box,
   Card,
   CardActionArea,
-  CardActions,
-  CardContent,
-  CardHeader,
-  CardMedia,
-  Divider,
-  IconButton,
-  Typography,
 } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
-import ModeEditIcon from "@mui/icons-material/ModeEdit";
-import CallIcon from "@mui/icons-material/Call";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import React from "react";
+import React, { useState } from "react";
 import CardHead from "./CardHead";
 import CardBody from "./CardBody";
 import CardActionBar from "./CardActionBar";
@@ -22,14 +10,29 @@ import cardType from "../../models/types/cardType";
 import { func } from "prop-types";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "../../../routes/routesModel";
+import { useUser } from "../../../users/providers/UserProvider";
+import { changeLikeStatus } from "../../services/cardApiService";
 
 export default function CardBussinesComponent({
   card,
   handleDelete,
-  handleEdit,
-  handleLike,
+  updateLike
 }) {
   const navigate = useNavigate();
+  const [isLiked, setLiked] = useState(false);
+  const {user} = useUser();
+
+  useState(()=>{
+    const checkForLike = () =>{
+      if (card.likes.includes(user.id)){
+        setLiked(true);
+      }
+    };
+
+    if(user) checkForLike();
+  },[card]
+  );
+
   return (
     <>
       <Card sx={{ width: 250, m: 2 }}>
@@ -46,11 +49,14 @@ export default function CardBussinesComponent({
           />
         </CardActionArea>
         <CardActionBar
+          card={card}
           id={card._id}
           user_id={card.user_id}
           handleDelete={handleDelete}
-          handleEdit={handleEdit}
-          handleLike={handleLike}
+          handleLike={changeLikeStatus}
+          isLiked={isLiked}
+          setLiked={setLiked}
+          updateLike={updateLike}
         />
       </Card>
     </>
@@ -60,6 +66,4 @@ export default function CardBussinesComponent({
 CardBussinesComponent.propTypes = {
   card: cardType.isRequired,
   handleDelete: func,
-  handleEdit: func,
-  handleLike: func,
 };
